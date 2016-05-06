@@ -5,7 +5,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 /**
- * The Game Of Life
+ * The Game Of Life, Cell class
  *
  * @author Magnus Andersen, Vebjørn Grønhaug
  * @version 1.0
@@ -75,6 +75,10 @@ public class Cell {
      * boolean click is set to true
      * if the cell that is clicked already is alive, it will be set to dead
      * and if the cell that is clicked is dead, it will be set to alive
+     * 
+     * Magnus had the responsibillity to make the animation, included the clicked function
+     * countLivingCells and changeState
+     * 
      */
     boolean clicked(int x, int y){
         boolean click = false;

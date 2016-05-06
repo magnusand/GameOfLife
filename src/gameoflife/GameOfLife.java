@@ -20,13 +20,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
 import java.io.File;
 import static javafx.application.Application.launch;
 
 /**
- * The Game of Life
+ * The Game Of Life, GameOfLife class
  * 
  * @author Magnus Andersen, Vebjørn Grønhaug
  * @version 1.0
@@ -91,6 +89,9 @@ public class GameOfLife extends Application {
     
     /**
      * @param primaryStage is the stage that surroundes the game
+     * 
+     * All three group memebers at the moment: Marius, Vebjørn and Magnus developed
+     * the board and playpause function and reset function we had shared responsibillity for this
      */
     @Override
     public void start(Stage primaryStage){
@@ -207,6 +208,9 @@ public class GameOfLife extends Application {
                 
         /**
          * Makes an anamation timer that handles how fast the animation updates
+         * 
+         * Magnus had responsibillity for the Animation function, and developed the timer
+         * and code for the animation to function, setAllCellsDead, render and update. 
          */
         startTime = System.nanoTime(); 
         new AnimationTimer(){
@@ -272,6 +276,8 @@ public class GameOfLife extends Application {
      * it draws one vertical row at the time and moves one step to the right if "$" is found
      * a number in front of a letter decides how many dead or alive cells it should draw
      * when a "!" is found the program stops reading the .RLE file.
+     * 
+     * Magnus and Vebjørn had responsibillity for making the filehandler and chooser.
      */
     void readFile(String fileName){
         try {
